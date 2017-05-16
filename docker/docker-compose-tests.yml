@@ -1,0 +1,9 @@
+version: '2'
+services:
+    'groceries-tesco':
+        extends:
+            file: docker-compose.yml
+            service: groceries-tesco 
+        command: >
+          bash -c "
+          "

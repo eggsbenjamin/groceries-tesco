@@ -1,0 +1,10 @@
+version: '2'
+services:
+  'groceries-tesco':
+      build:
+          dockerfile: Dockerfile
+          context: .
+      image: groceries-tesco
+      env_file: ../default.env
+      volumes:
+          - ../:/var/go//src/github.com/eggsbenjamin/grocery-service
