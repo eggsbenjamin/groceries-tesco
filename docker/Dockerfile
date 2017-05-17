@@ -18,7 +18,7 @@ ENV GOROOT /usr/local/go
 ENV GOPATH /var/go
 ENV GOBIN ${GOPATH}/bin
 ENV PATH ${PATH}:${GOROOT}/bin:${GOBIN}
-ENV WORKDIR ${GOPATH}/src/github.com/eggsbenjamin/grocery-service
+ENV WORKDIR ${GOPATH}/src/github.com/eggsbenjamin/groceries-tesco
 
 RUN mkdir -p ${WORKDIR}
 WORKDIR ${WORKDIR}
