@@ -2,7 +2,7 @@ install:
 	glide install
 
 unit_tests:
-	go test -v ./service/tesco -tags=unit
+	go test -v ./domain ./service/tesco -tags=unit
 
 integration_tests:
 	go test -v ./service/tesco -tags=integration

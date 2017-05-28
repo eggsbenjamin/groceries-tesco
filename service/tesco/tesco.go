@@ -32,10 +32,6 @@ func CreateMockResponse(sc int, bStr string) *http.Response {
 	}
 }
 
-type TescoClient interface {
-	GetProductsByGTIN(string) ([]*domain.Product, error)
-}
-
 type TescoService struct {
 	client HTTPClient
 }
