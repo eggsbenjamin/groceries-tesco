@@ -6,5 +6,7 @@ services:
           context: .
       image: groceries-tesco
       env_file: ../default.env
+      environment:
+        - TESCO_API_KEY=${TESCO_API_KEY}
       volumes:
-          - ../:/var/go//src/github.com/eggsbenjamin/grocery-service
+          - ../:/var/go/src/github.com/eggsbenjamin/groceries-tesco

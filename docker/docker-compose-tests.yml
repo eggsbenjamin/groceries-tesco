@@ -6,4 +6,6 @@ services:
             service: groceries-tesco 
         command: >
           bash -c "
+            make unit_tests && \
+            make integration_tests
           "
