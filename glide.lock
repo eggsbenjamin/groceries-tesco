@@ -1,12 +1,24 @@
-hash: a05482186359d20e239ca632cd4b380a5a878ad4678606cf3376e4201803caa5
-updated: 2017-05-27T23:07:46.205735128+01:00
+hash: e57fb690a568b80fc59f6bff4693bc85c5614ace2a2d7d61a810f18991855223
+updated: 2017-05-29T15:53:19.796246552+01:00
 imports:
 - name: github.com/davecgh/go-spew
   version: 6d212800a42e8ab5c146b8ace3490ee17e5225f9
   subpackages:
   - spew
+- name: github.com/eggsbenjamin/groceries-tesco
+  version: 873b1c2a2a262f824f4f2f31c46053bcb232950d
+  subpackages:
+  - domain
+  - service/tesco
 - name: github.com/fsnotify/fsnotify
   version: 4da3e2cfbabc9f751898f250b49f2439785783a1
+- name: github.com/golang/protobuf
+  version: 9f174c986221c608fb5143bd623b6076a71feae3
+  subpackages:
+  - proto
+  - ptypes/any
+- name: github.com/grpc/grpc-go
+  version: 2739967807cc0e3199513569f58fda34252ad65e
 - name: github.com/hashicorp/hcl
   version: 7fa7fff964d035e8a162cce3a164b3ad02ad651b
   subpackages:
@@ -59,6 +71,13 @@ imports:
   version: 48359f4f600b3a2d5cf657458e3f940021631a56
   subpackages:
   - html/charset
+  - context
+  - http2
+  - trace
+  - http2/hpack
+  - idna
+  - lex/httplex
+  - internal/timeseries
 - name: golang.org/x/sys
   version: a55a76086885b80f79961eacb876ebd8caf3868d
   subpackages:
@@ -68,6 +87,28 @@ imports:
   subpackages:
   - transform
   - unicode/norm
+  - secure/bidirule
+  - unicode/bidi
+- name: google.golang.org/genproto
+  version: d80a6e20e776b0b17a324d0ba1ab50a39c8e8944
+  subpackages:
+  - googleapis/rpc/status
+- name: google.golang.org/grpc
+  version: 2739967807cc0e3199513569f58fda34252ad65e
+  subpackages:
+  - codes
+  - credentials
+  - grpclb/grpc_lb_v1
+  - grpclog
+  - internal
+  - keepalive
+  - metadata
+  - naming
+  - peer
+  - stats
+  - status
+  - tap
+  - transport
 - name: gopkg.in/yaml.v2
   version: cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b
 testImports: []
