@@ -7,5 +7,6 @@ services:
         command: >
           bash -c "
             make unit_tests && \
-            make integration_tests
+            make integration_tests && \
+            make system_tests
           "

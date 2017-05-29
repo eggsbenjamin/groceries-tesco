@@ -11,3 +11,8 @@ import:
 - package: golang.org/x/net
   subpackages:
   - html/charset
+- package: github.com/golang/protobuf
+- package: github.com/grpc/grpc-go
+- package: golang.org/x/sys
+  subpackages:
+  - unix

@@ -18,7 +18,7 @@ func init() {
 	viper.SetEnvPrefix("tesco")
 }
 
-var _ = Describe("Tesco Integration Tests", func() {
+var _ = Describe("Tesco Service", func() {
 	Context("when calling the Tesco API", func() {
 		It("receives the expected products", func() {
 			By("setup")

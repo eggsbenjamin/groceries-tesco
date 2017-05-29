@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package tescogrpc;
+
+service TescoService {
+  rpc GetProducts(GetProductsRequest) returns (ProductsResponse) {}
+}
+
+message GetProductsRequest {
+  string barcode = 1;
+}
+
+message ProductsResponse {
+  repeated Product Products = 1;
+}
+
+message Product {
+  string gtin = 1;
+  string description = 2;
+  ProductContents contents = 3;
+  ProductCharacterisitics characterisitics = 4;
+}
+
+message ProductContents {
+  float quantity = 1;
+  string quantityUom = 2;
+  string avgMeasure = 3;
+  string netContents = 4; 
+}
+
+message ProductCharacterisitics {
+  bool isFood = 1;
+  bool isDrink = 2;
+}

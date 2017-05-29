@@ -12,5 +12,5 @@ type Product struct {
 	ProductCharacteristics *struct {
 		IsFood  bool `json:"isFood"`
 		IsDrink bool `json:"isDrink"`
-	}
+	} `json:"productCharacteristics"`
 }
