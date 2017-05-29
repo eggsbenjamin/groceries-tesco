@@ -1,25 +1,11 @@
-FROM ubuntu:16.04
+FROM scratch
 
-RUN \
-  apt-get update \
-  && apt-get upgrade -y \
-  && apt-get install -y \
-      curl \
-      git \
-      make
+COPY bin /var/www/bin
 
-RUN \
-  curl -O https://storage.googleapis.com/golang/go1.8.1.linux-amd64.tar.gz \
-  && tar xf go1.8.1.linux-amd64.tar.gz -C /usr/local
+WORKDIR /var/www
 
-RUN mkdir /var/go
+ENV TESCO_SERVICE_PORT 80 
 
-ENV GOROOT /usr/local/go
-ENV GOPATH /var/go
-ENV GOBIN ${GOPATH}/bin
-ENV PATH ${PATH}:${GOROOT}/bin:${GOBIN}
-ENV WORKDIR ${GOPATH}/src/github.com/eggsbenjamin/groceries-tesco
+EXPOSE 80 
 
-RUN mkdir -p ${WORKDIR}
-WORKDIR ${WORKDIR}
-
+CMD ["bin/groceries-tesco"]
